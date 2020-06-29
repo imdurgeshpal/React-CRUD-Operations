@@ -26,8 +26,7 @@ const UserList = () => {
 
     const addUser = user => {
         if (user.id) {
-            console.log(user.id)
-           // setUsers(users.map(u => (u.id === user.id ? user : null)))
+            setUsers(users.map((u) => (u.id === user.id ? user : u)));
         } else {
             user.id = users.length + 1;
             setUsers([...users, user]);
